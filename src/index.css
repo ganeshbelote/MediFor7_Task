@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+  font-family: HelveticaNowMTText, HelveticaNowMTTextRegular,
+    'Helvetica Now MT Text', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  button,
+  li {
+    cursor: pointer;
+  }
+  .marque-content {
+    animation: marquee 15s linear infinite;
+  }
+  .marque-wrapper::after {
+    content: '';
+    height: 100%;
+    width: 50px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: -15px 0px 35px 10px #ffffff;
+  }
+  .marque-wrapper::before {
+    content: '';
+    height: 100%;
+    width: 50px;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 15px 0px 35px 10px #ffffff;
+  }
+  .text-border {
+    font-family: 'Work Sans', 'Helvetica Now MT Text', Helvetica, Arial,
+      sans-serif;
+    text-shadow: -0.2px -0.2px 0 #ffffff, 0.2px -0.2px 0 #ffffff,
+      -0.2px 0.2px 0 #ffffff, 0.2px 0.2px 0 #ffffff;
+  }
+  .promotion-quote {
+    animation: marquee 12s linear infinite;
+  }
+  .pin-spacer {
+    padding-bottom: 0;
+  }
+  #title01,
+  #title02,
+  #title03,
+  #title04 {
+    font-family: Thunder Vf, Georgia, sans-serif;
+  }
+  #content01,
+  #content02,
+  #content03,
+  .content04 {
+    font-family: Satoshi Variable, Arial, sans-serif;
+  }
+  .resize-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    pointer-events: none;
+    padding: 24px;
+    text-align: center;
+    border: 10px solid rgb(221, 255, 0);
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
