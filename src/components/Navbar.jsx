@@ -67,13 +67,13 @@ const Navbar = ({
           className='logo h-12'
         />
         <ul className='menuOptions px-4 py-2 rounded-xl w-fit bg-[#252525] hidden lg:flex items-center justify-center gap-6'>
-          <li>Home</li>
-          <li>About</li>
-          <li>Features</li>
-          <li>Achievements</li>
+          <li className='hover:text-[#FF3B30]'>Home</li>
+          <li className='hover:text-[#FF3B30]'>About</li>
+          <li className='hover:text-[#FF3B30]'>Features</li>
+          <li className='hover:text-[#FF3B30]'>Achievements</li>
         </ul>
         <div className='btn-wrapper flex gap-8'>
-          <button className='free-trial-btn hidden md:block lg:block px-4 py-2 rounded-xl bg-white text-black'>
+          <button className='free-trial-btn hidden md:block lg:block px-4 py-2 rounded-xl bg-white text-black hover:scale-105'>
             Free Trial
           </button>
           {showMenuBtn && (

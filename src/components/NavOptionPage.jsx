@@ -27,6 +27,8 @@ const NavOptionPage = ({
     })
 
     tl.to('#NavOptionPage', {
+      height : '40px',
+      width : '40px',
       scale: 0.05, // You had `-100`, which flips the element and causes weirdness
       borderRadius: '50%',
       duration: 1,
@@ -48,7 +50,7 @@ const NavOptionPage = ({
   return (
     <div
       id='NavOptionPage'
-      className={`fixed top-0 right-0 z-50 h-screen w-screen overflow-hidden flex flex-col justify-between py-8 px-10 bg-[#FF3B30] `}
+      className={`fixed top-0 right-0 z-50 h-screen w-screen overflow-hidden flex flex-col justify-between py-8 md:px-10 px-6 bg-[#FF3B30] `}
     >
       <div className='navpage-up w-full flex justify-end'>
         <button onClick={handleNavPage}>
@@ -56,7 +58,7 @@ const NavOptionPage = ({
         </button>
       </div>
       <div className='nav-options flex flex-col items-start justify-between'>
-        <ul className='md:text-7xl text-5xl md:font-semibold font-bold flex flex-col md:gap-5 gap-12'>
+        <ul className='md:text-7xl text-4xl md:font-semibold font-bold flex flex-col md:gap-5 gap-12'>
           <li className='hover:text-white transition-all ease-in-out duration-300'>
             Home
           </li>
