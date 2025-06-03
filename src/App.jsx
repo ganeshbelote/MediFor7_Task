@@ -12,7 +12,6 @@ import What from './components/What'
 import WhyChooseUs from './components/WhyChooseUs'
 import { useEffect, useState } from 'react'
 import NavOptionPage from './components/NavOptionPage'
-import LocomotiveScroll from 'locomotive-scroll'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
 gsap.registerPlugin(ScrollTrigger)
