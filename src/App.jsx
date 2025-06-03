@@ -23,7 +23,7 @@ function App () {
 
   const handleNavPageAnimation = () => {
     gsap.to('.menu-option-opening-bg', {
-      scale: 100,
+      scale: 150,
       duration: 1.2,
       ease: 'power2.inOut',
       onComplete: () => {
