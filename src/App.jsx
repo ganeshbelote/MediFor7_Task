@@ -47,20 +47,26 @@ function App () {
   let resizeTimeout
 
   useEffect(() => {
-    const handleResize = () => {
-      console.log(isResizing)
-      setIsResizing(true)
+  let resizeTimeout;
+  let lastWindowWidth = window.innerWidth;
 
-      clearTimeout(resizeTimeout)
+  const handleResize = () => {
+    if (window.innerWidth !== lastWindowWidth) {
+      lastWindowWidth = window.innerWidth;
+
+      setIsResizing(true);
+
+      clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
-        window.location.reload()
-        // setIsResizing(false);
-      }, 1000)
+        window.location.reload();
+      }, 1000);
     }
+  };
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
+
 
   return (
     <div className={`app ${navPage ? 'h-screen overflow-hidden' : ''}`}>
