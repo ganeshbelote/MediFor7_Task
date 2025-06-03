@@ -58,7 +58,7 @@ const NavOptionPage = ({
         </button>
       </div>
       <div className='nav-options flex flex-col items-start justify-between'>
-        <ul className='md:text-7xl text-4xl md:font-semibold font-bold flex flex-col md:gap-5 gap-12'>
+        <ul className='md:text-7xl text-4xl md:font-semibold font-bold flex flex-col md:gap-5 gap-8'>
           <li className='hover:text-white transition-all ease-in-out duration-300'>
             Home
           </li>
