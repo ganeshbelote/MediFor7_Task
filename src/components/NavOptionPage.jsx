@@ -45,7 +45,7 @@ const NavOptionPage = ({
     gsap.to(['.navpage-up', '.nav-options'], {
       opacity: 1,
       duration: 1,
-      delay: 0.2,
+      delay: 0.3,
       ease: 'power4.inOut'
     })
   })
