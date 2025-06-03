@@ -10,17 +10,6 @@ const NavOptionPage = ({
   setshowMenuBtn
 }) => {
 
-  useEffect(() => {
-  const setVh = () => {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  };
-
-  setVh(); // Initial set
-  window.addEventListener('resize', setVh);
-
-  return () => window.removeEventListener('resize', setVh);
-}, []);
 
 
   const handleNavPage = () => {
@@ -64,15 +53,14 @@ const NavOptionPage = ({
   return (
     <div
       id='NavOptionPage'
-      style={{ height: 'calc(var(--vh, 1vh) * 100)' }}
-      className={`fixed top-0 right-0 z-50 w-screen overflow-x-hidden flex flex-col justify-between py-8 md:px-10 px-6 bg-[#FF3B30] `}
+      className={`fixed top-0 right-0 z-50 h-screen w-screen overflow-x-hidden flex flex-col py-8 md:px-10 px-6 bg-[#FF3B30] `}
     >
       <div className='navpage-up w-full flex justify-end'>
         <button onClick={handleNavPage}>
           <img className='h-8' src={cross} alt='cross' />
         </button>
       </div>
-      <div className='nav-options flex flex-col items-start justify-between'>
+      <div className='nav-options mt-[40vh] flex flex-col items-start justify-between'>
         <ul className='md:text-7xl text-4xl md:font-semibold font-bold flex flex-col md:gap-5 gap-8'>
           <li className='hover:text-white transition-all ease-in-out duration-300'>
             Home
