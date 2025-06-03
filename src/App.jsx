@@ -24,7 +24,7 @@ function App () {
   const handleNavPageAnimation = () => {
     gsap.to('.menu-option-opening-bg', {
       scale: 100,
-      duration: 1.6,
+      duration: 1.2,
       ease: 'power2.inOut',
       onComplete: () => {
         setShowBg(false) // React-safe way to remove the element
