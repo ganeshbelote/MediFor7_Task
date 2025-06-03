@@ -50,7 +50,7 @@ const NavOptionPage = ({
   return (
     <div
       id='NavOptionPage'
-      className={`fixed top-0 right-0 z-50 h-screen w-screen overflow-hidden flex flex-col justify-between py-8 md:px-10 px-6 bg-[#FF3B30] `}
+      className={`fixed top-0 right-0 z-50 h-screen w-screen overflow-x-hidden flex flex-col justify-between py-8 md:px-10 px-6 bg-[#FF3B30] `}
     >
       <div className='navpage-up w-full flex justify-end'>
         <button onClick={handleNavPage}>
